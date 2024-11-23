@@ -6,6 +6,9 @@ let
     (mkKeymap "i" "<c-s>" "<esc>:w<cr>" "Save file")
     (mkKeymap "i" "<a-j>" "<esc>:m .+1<cr>==gi" "Move Line Down")
     (mkKeymap "i" "<a-k>" "<esc>:m .-2<cr>==gi" "Move Line Up")
+    # (mkKeymap "i" "<a-h>" "<cmd>ToggleTerm dir=git_dir direction=horizontal<CR>" "Toggle HTerm")
+    # (mkKeymap "i" "<a-v>" "<cmd>ToggleTerm dir=git_dir direction=vertical<CR>" "Toggle VTerm")
+    # (mkKeymap "i" "<a-i>" "<cmd>ToggleTerm dir=git_dir direction=float<CR>" "Toggle FTerm")
   ];
   normal = [
 
@@ -16,6 +19,10 @@ let
 
     (mkKeymap "n" "<a-j>" "<cmd>m .+1<cr>==" "Move line Down")
     (mkKeymap "n" "<a-k>" "<cmd>m .-2<cr>==" "Move line up")
+
+    # (mkKeymap "n" "<a-h>" "<cmd>ToggleTerm dir=git_dir direction=horizontal<CR>" "Toggle HTerm")
+    # (mkKeymap "n" "<a-v>" "<cmd>ToggleTerm dir=git_dir direction=vertical<CR>" "Toggle VTerm")
+    # (mkKeymap "n" "<a-i>" "<cmd>ToggleTerm dir=git_dir direction=float<CR>" "Toggle Fterm")
 
     (mkKeymap "n" "<s-h>" "<esc>:bprev<cr>" "Buffer Previous")
     (mkKeymap "n" "<s-l>" "<esc>:bnext<cr>" "Buffer Next")
@@ -93,6 +100,10 @@ let
     (mkKeymap "v" "<c-s>" "<esc>:w<cr>" "Saving File")
     (mkKeymap "v" "<c-c>" "<esc>" "Escape")
 
+     #(mkKeymap "v" "<a-h>" "<cmd>ToggleTerm dir=git_dir direction=horizontal<CR>" "Toggle HTerm")
+     #(mkKeymap "v" "<a-v>" "<cmd>ToggleTerm dir=git_dir direction=vertical<CR>" "Toggle VTerm")
+     #(mkKeymap "v" "<a-i>" "<cmd>ToggleTerm dir=git_dir direction=float<CR>" "Toggle FTerm")
+
     (mkKeymap "v" "<a-j>" ":m '>+1<cr>gv-gv" "Move Selected Line Down")
     (mkKeymap "v" "<a-k>" ":m '<lt>-2<CR>gv-gv" "Move Selected Line Up")
 
@@ -126,6 +137,12 @@ in
     (specObj [ "<leader>|" "" "vsplit" ])
     (specObj [ "<leader>-" "" "split" ])
   ];
+
+          #t = [
+          #  (mkKeymap "t" "<a-h>" "<cmd>ToggleTerm dir=git_dir direction=horizontal<CR>" "Toggle HTerm")
+          #  (mkKeymap "t" "<a-v>" "<cmd>ToggleTerm dir=git_dir direction=vertical<CR>" "Toggle VTerm")
+          #  (mkKeymap "t" "<a-i>" "<cmd>ToggleTerm dir=git_dir direction=float<CR>" "Toggle FTerm")
+          #];
 
   # For some reason `mkKeymap` assingment freezes neovim
   extraConfigLua = # lua

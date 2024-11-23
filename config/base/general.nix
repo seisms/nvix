@@ -24,7 +24,7 @@ in {
     dressing.enable = true;
     lastplace.enable = true;
     oil.enable = true;
-
+    # toggleterm.enable = true;
     fidget = {
       enable = true;
       progress.display.progressIcon.pattern = "moon";

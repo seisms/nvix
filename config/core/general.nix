@@ -1,5 +1,6 @@
-{ icons, opts, ... }: {
+{ icons, opts, lib, config, ... }: {
 
+  imports = [ ./utils.nix ];
   performance.byteCompileLua = {
     enable = true;
     nvimRuntime = true;
@@ -10,6 +11,7 @@
     web-devicons.enable = true;
     nvim-autopairs.enable = true;
   };
+  utils.enable = lib.mkDefault true;
   extraConfigLua = # lua
     ''
       local signs = {
