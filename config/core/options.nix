@@ -23,10 +23,10 @@ with lib; {
     pumheight = 10;
 
     expandtab = true;
-    shiftwidth = 2;
+    shiftwidth = 4;
     smartindent = true;
-    tabstop = 2;
-    softtabstop = 2;
+    tabstop = 4;
+    softtabstop = 4;
 
     ignorecase = true;
     smartcase = true;
